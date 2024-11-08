@@ -1,3 +1,5 @@
+/*   Conteudo Geral do site    */
+
 *
 {
     margin: 0;
@@ -7,18 +9,25 @@
 
 body
 {
-    background-image: url("paper.jpg");
+
+    background-image: url("imgs/paper.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: bottom;
     height: 100vh;
 }
 
+/*   Fim do conteudo geral    */
+
+
+/* Parte superior do site    */
 header
 {
     display: flex;
     justify-content: space-between;
     align-items: center; 
-    background-color: rgb(3, 1, 20);
+    background: #111317;
+    box-shadow: 0 5px 5px rgba(255, 255, 255, 0.123);
 }
 
 header h1 
@@ -33,15 +42,17 @@ header nav ul
 
 nav li
 {
-    font-size: 1.2rem;
+    font-size: 1rem;
     display: inline-block;
     list-style-type: none;   
+    margin: 0 2rem;
 }
 
 #imagem img
 {
     width: 3rem; 
 }
+
 
 #nomePage h1 
 {
@@ -50,7 +61,7 @@ nav li
     font-size: 1.7rem;
 } 
 
-a
+nav ul a
 {
     display: inline-block;
     color: rgb(255, 255, 255);
@@ -58,20 +69,93 @@ a
     transition: transform 0.3s ease; 
 }
 
-a:hover
+nav ul a:hover
 {
     transform: translateY(-7px); 
+    color: rgb(255, 251, 0);
+    font-weight: bolder;
+}
+
+
+/*  Fim da parte superior do site     */
+
+
+
+/*  Rodapé do site   */
+footer
+{
+    height: 13vh;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: #111317;
+}
+
+.container
+{
+    padding: 5px 5px;
+    display: flex;
+    justify-content: space-between; 
+    width: 90%;
+    max-width: 1200px; 
+}
+
+.container .footer-Text
+{
+    color: white;
+    width: 9rem;
+
+}
+
+.container p
+{
+    font-size: 1rem;
+    text-align: center;
+}
+
+
+.container h2
+{
+    text-align: center;
+    margin-bottom: 1rem;   
+    color: rgb(255, 233, 32);
+}
+
+
+#logoImg img
+{
+    width: 1.9rem;
+}
+
+.container .footer-Text a
+{
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition: transform 0.3s ease-out; 
+}
+
+.container .footer-Text a:hover
+{
+    transform: translateY(-1px);
     color: aqua;
     font-weight: bolder;
 }
 
-@media screen and (max-width: 530px) {
+/* Fim do Rodapé do site   */
+
+
+
+/* Modificações para outras telas  */
+@media screen and (max-width: 617px) {
     header {
         justify-content: center; 
     }
 
     #imagem img {
-        width: 3rem; /* Manter a largura da imagem */
+        width: 3rem; 
     }
 
     #nomePage h1 
@@ -84,6 +168,25 @@ a:hover
     }
 
     body{
-        background-position: center right;
+        background-position: center;
     }
+
+    .container .footer-Text p
+    {
+    font-size: 1.5vh;
+    }
+
+    .container .footer-Text h2
+    {
+    font-size: 1.8vh;
+    }
+
 }
+
+@media screen and (max-width: 1058px) {
+#logoImg
+{
+    display: none;
+}
+}
+/* Fim das modificações para outras telas  */
